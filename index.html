@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorldTours&Travels - Your Ultimate Travel Partner</title>
+  <meta name="description" content="WorldTours&Travels - Discover the best travel packages, car rentals, and tour guides for your next adventure.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER / NAVBAR
+       ========================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navContent">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <img src="public/images/LOGO.png" alt="WorldTours & Travels" style="height: 75px; width: auto; margin: -15px 0;">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="desktopNav">
+          <ul class="navLinks">
+            <li><a href="#" class="navLink active">Home</a></li>
+            <li><a href="#profile" class="navLink">About</a></li>
+            <li><a href="#services" class="navLink">Our Services</a></li>
+            
+            <li><a href="#contact" class="navLink">Contact</a></li>
+          </ul>
+
+          
+
+          <div class="authButtons" style="display: none;">
+          </div>
+        </div>
+
+        <!-- Mobile Controls -->
+        <div class="mobileControls">
+          
+          <button class="mobileMenuBtn" id="mobileMenuBtn" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Side Drawer (Mobile Nav) -->
+  <div class="drawerOverlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawerHeader">
+      <div>
+        <img src="public/images/LOGO.png" alt="WorldTours & Travels" style="height: 50px; width: auto; max-width: 100%;">
+      </div>
+      <button class="drawerClose" id="drawerClose">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav class="drawerNav" style="padding: 15px 12px;">
+      <ul style="display: flex; flex-direction: column; gap: 8px;">
+        <li>
+          <a href="#" class="drawerLink active" style="border-radius: 14px; padding: 12px 16px; font-size: 1.05rem; font-weight: 600; display: flex; align-items: center; gap: 16px; transition: all 0.3s ease;">
+            <div style="background: rgba(13, 110, 253, 0.1); width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-size: 1.1rem;">
+              <i class="fa-solid fa-house"></i>
+            </div>
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#profile" class="drawerLink" style="border-radius: 14px; padding: 12px 16px; font-size: 1.05rem; font-weight: 600; display: flex; align-items: center; gap: 16px; transition: all 0.3s ease;">
+            <div style="background: rgba(0, 191, 255, 0.1); width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--color-secondary); font-size: 1.1rem;">
+              <i class="fa-solid fa-building"></i>
+            </div>
+            About Us
+          </a>
+        </li>
+        <li>
+          <a href="#services" class="drawerLink" style="border-radius: 14px; padding: 12px 16px; font-size: 1.05rem; font-weight: 600; display: flex; align-items: center; gap: 16px; transition: all 0.3s ease;">
+            <div style="background: rgba(245, 158, 11, 0.1); width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #F59E0B; font-size: 1.1rem;">
+              <i class="fa-solid fa-car-side"></i>
+            </div>
+            Fleet & Services
+          </a>
+        </li>
+        
+        <li>
+          <a href="#contact" class="drawerLink" style="border-radius: 14px; padding: 12px 16px; font-size: 1.05rem; font-weight: 600; display: flex; align-items: center; gap: 16px; transition: all 0.3s ease;">
+            <div style="background: rgba(139, 92, 246, 0.1); width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #8B5CF6; font-size: 1.1rem;">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- drawerActions removed -->
+  </aside>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero">
+      <div class="bgGradient">
+        <div class="bgGrid"></div>
+      </div>
+
+      <div class="heroInner">
+        <div class="container">
+          <div class="heroSplit">
+            <!-- Left Side -->
+            <div class="heroLeft">
+              <h1 class="heroTitle">
+                World Tours & <span class="heroGradientText">Travels</span>
+              </h1>
+              <p class="heroTagline">
+                Premium outstation trips and city rides. Top-class vehicles with professional drivers for a safe, comfortable, and truly elevated journey.
+              </p>
+
+              <div class="buttonGroup">
+                <a href="javascript:void(0)" class="primaryBtn">
+                  <span>Book Your Trip</span> <i class="fa-solid fa-car-side"></i>
+                </a>
+                <a href="#services" class="secondaryBtn">
+                  <span>Explore</span> <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Right Mockups Column -->
+            <div class="heroRight" style="flex: 1 1 50%;">
+              <!-- Image removed as requested -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Partners Section Removed -->
+
+    
+
+    <!-- ==========================================================================
+         SERVICES SECTION (with fully responsive 3D carousel logic)
+         ========================================================================== -->
+    
+    <!-- ==========================================================================
+         OUR FLEET SECTION
+         ========================================================================== -->
+    
+    <!-- ==========================================================================
+         OUR FLEET SECTION
+         ========================================================================== -->
+    <section id="services" class="servicesSection" style="background-color: var(--color-surface-2);">
+      <div class="container">
+        <div class="sectionHeader" style="text-align: center; margin-bottom: 50px;">
+          <span class="sectionLabel">Our Fleet</span>
+          <h2 class="sectionTitle">Premium Cars For Your Every Journey</h2>
+        </div>
+
+        
+        <div class="servicesGridContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;">
+          
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 12px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';" onmouseout="this.style.transform='translateY(0)';">
+            <div style="height: 160px; display: flex; align-items: center; justify-content: center; padding: 0;">
+              <img src="public/images/Swift-removebg-preview.png" alt="Swift" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15)); transform: scale(1);">
+            </div>
+            <div style="padding: 12px; text-align: center; border-top: 1px solid var(--color-border);">
+              <h3 class="serviceTitle" style="margin: 0; font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary);">Maruti Swift</h3>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 12px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';" onmouseout="this.style.transform='translateY(0)';">
+            <div style="height: 160px; display: flex; align-items: center; justify-content: center; padding: 0;">
+              <img src="public/images/eIRTIGA-removebg-preview.png" alt="Ertiga" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15)); transform: scale(1);">
+            </div>
+            <div style="padding: 12px; text-align: center; border-top: 1px solid var(--color-border);">
+              <h3 class="serviceTitle" style="margin: 0; font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary);">Maruti Ertiga</h3>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 12px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';" onmouseout="this.style.transform='translateY(0)';">
+            <div style="height: 160px; display: flex; align-items: center; justify-content: center; padding: 0;">
+              <img src="public/images/innova-removebg-preview.png" alt="Innova" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15)); transform: scale(1);">
+            </div>
+            <div style="padding: 12px; text-align: center; border-top: 1px solid var(--color-border);">
+              <h3 class="serviceTitle" style="margin: 0; font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary);">Toyota Innova</h3>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 12px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';" onmouseout="this.style.transform='translateY(0)';">
+            <div style="height: 160px; display: flex; align-items: center; justify-content: center; padding: 0;">
+              <img src="public/images/fORCE_TRAVELLER-removebg-preview.png" alt="Force Traveller" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15)); transform: scale(1);">
+            </div>
+            <div style="padding: 12px; text-align: center; border-top: 1px solid var(--color-border);">
+              <h3 class="serviceTitle" style="margin: 0; font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary);">Force Traveller</h3>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 12px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';" onmouseout="this.style.transform='translateY(0)';">
+            <div style="height: 160px; display: flex; align-items: center; justify-content: center; padding: 0;">
+              <img src="public/images/thar.png" alt="Mahindra Thar" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15)); transform: scale(1);">
+            </div>
+            <div style="padding: 12px; text-align: center; border-top: 1px solid var(--color-border);">
+              <h3 class="serviceTitle" style="margin: 0; font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary);">Mahindra Thar</h3>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 12px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';" onmouseout="this.style.transform='translateY(0)';">
+            <div style="height: 160px; display: flex; align-items: center; justify-content: center; padding: 0;">
+              <img src="public/images/Scorpio.png" alt="Mahindra Scorpio" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15)); transform: scale(1);">
+            </div>
+            <div style="padding: 12px; text-align: center; border-top: 1px solid var(--color-border);">
+              <h3 class="serviceTitle" style="margin: 0; font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary);">Mahindra Scorpio</h3>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 12px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';" onmouseout="this.style.transform='translateY(0)';">
+            <div style="height: 160px; display: flex; align-items: center; justify-content: center; padding: 0;">
+              <img src="public/images/Hyundai-Verna.png" alt="Hyundai Verna" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15)); transform: scale(1);">
+            </div>
+            <div style="padding: 12px; text-align: center; border-top: 1px solid var(--color-border);">
+              <h3 class="serviceTitle" style="margin: 0; font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary);">Hyundai Verna</h3>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 12px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';" onmouseout="this.style.transform='translateY(0)';">
+            <div style="height: 160px; display: flex; align-items: center; justify-content: center; padding: 0;">
+              <img src="public/images/fortuner (2).png" alt="Toyota Fortuner" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15)); transform: scale(1);">
+            </div>
+            <div style="padding: 12px; text-align: center; border-top: 1px solid var(--color-border);">
+              <h3 class="serviceTitle" style="margin: 0; font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary);">Toyota Fortuner</h3>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 12px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';" onmouseout="this.style.transform='translateY(0)';">
+            <div style="height: 160px; display: flex; align-items: center; justify-content: center; padding: 0;">
+              <img src="public/images/baleno.png" alt="Maruti Baleno" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div style="padding: 12px; text-align: center; border-top: 1px solid var(--color-border);">
+              <h3 class="serviceTitle" style="margin: 0; font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary);">Maruti Baleno</h3>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 12px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';" onmouseout="this.style.transform='translateY(0)';">
+            <div style="height: 160px; display: flex; align-items: center; justify-content: center; padding: 0;">
+              <img src="public/images/Kia_iamge.jpg" alt="Kia Carens" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div style="padding: 12px; text-align: center; border-top: 1px solid var(--color-border);">
+              <h3 class="serviceTitle" style="margin: 0; font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary);">Kia Carens</h3>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 12px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';" onmouseout="this.style.transform='translateY(0)';">
+            <div style="height: 160px; display: flex; align-items: center; justify-content: center; padding: 0;">
+              <img src="public/images/venue.jpg" alt="Hyundai Venue" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div style="padding: 12px; text-align: center; border-top: 1px solid var(--color-border);">
+              <h3 class="serviceTitle" style="margin: 0; font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary);">Hyundai Venue</h3>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 12px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';" onmouseout="this.style.transform='translateY(0)';">
+            <div style="height: 160px; display: flex; align-items: center; justify-content: center; padding: 0;">
+              <img src="public/images/Breeza.png" alt="Maruti Brezza" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15)); transform: scale(1);">
+            </div>
+            <div style="padding: 12px; text-align: center; border-top: 1px solid var(--color-border);">
+              <h3 class="serviceTitle" style="margin: 0; font-size: 1.1rem; font-weight: 700; color: var(--color-text-primary);">Maruti Brezza</h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ==========================================================================
+         FEATURES SECTION
+         ========================================================================== -->
+    
+    
+    
+    <!-- ==========================================================================
+         POPULAR ROUTES SECTION
+         ========================================================================== -->
+    <section id="features" class="featuresSection" style="background-color: var(--color-background); padding-bottom: 20px;">
+      <div class="container">
+        <div class="sectionHeader animateOnScroll" style="text-align: center; margin-bottom: 50px;">
+          <span class="sectionLabel">Top Destinations</span>
+          <h2 class="sectionTitle">Explore Top Destinations With Us</h2>
+        </div>
+
+        <div class="servicesGridContainer" style="grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 25px;">
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/jaisalmer-fort.jpg" alt="Jaipur to Jaisalmer" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Jaisalmer</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/jpdhpur.jpg" alt="Jaipur to Jodhpur" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Jodhpur</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/Bikaner.jpg" alt="Jaipur to Bikaner" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Bikaner</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/udaipur.jpg" alt="Jaipur to Udaipur" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Udaipur</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/Mount-Abu.jpg" alt="Jaipur to Mount Abu" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Mount Abu</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/pushkar.jpg" alt="Jaipur to Pushkar" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Pushkar</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/ranthambhour.jpg" alt="Jaipur to Ranthambore" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Ranthambore</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/Khatu-Shyam-Mandir.jpg" alt="Jaipur to Khatu Shyam" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Khatu Shyam</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/Salasar.jpg" alt="Jaipur to Salasar" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Salasar</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/tajmahal.jpg" alt="Jaipur to Agra" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Agra</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/Delhi.jpg" alt="Jaipur to Delhi" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Delhi</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/Chandigrah.jpg" alt="Jaipur to Chandigarh" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Chandigarh</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/Manali.jpg" alt="Jaipur to Manali" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Manali</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/Uttharakhand.jpg" alt="Jaipur to Uttarakhand" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Uttarakhand</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/Goa.jpg" alt="Jaipur to Goa" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Goa</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="serviceGridCard animateOnScroll" style="padding: 0; overflow: hidden; border-radius: 16px; background: var(--color-surface); box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: all 0.4s ease; position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.15)'; this.querySelector('img').style.transform='scale(1.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-card)'; this.querySelector('img').style.transform='scale(1)';">
+            <div style="height: 200px; width: 100%; overflow: hidden; position: relative; background-color: #e2e8f0;">
+              <img src="public/images/place/Kashmir.jpg" alt="Jaipur to Kashmir" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); pointer-events: none;"></div>
+            </div>
+            <div style="padding: 16px 20px;">
+              <div style="display: flex; align-items: flex-start; gap: 10px;">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary); font-size: 1.3rem; margin-top: 2px;"></i>
+                <div>
+                  <h3 class="featureTitle" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--color-text-primary);">Jaipur to Kashmir</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         OWNER PROFILE SECTION
+         ========================================================================== -->
+    <section class="ownerProfile" id="profile" style="padding: 10px 0 40px; background-color: var(--color-background);">
+      
+      <div class="container" style="max-width: 800px;">
+        <div class="ownerProfileCard animateOnScroll">
+          
+          <!-- Image Placeholder -->
+          <div class="ownerAvatar">
+            <img src="public/images/Profile_image.jpeg" alt="Shivraj Dhakar" style="width: 100%; height: 100%; object-fit: cover; object-position: top; position: relative; z-index: 2;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <i class="fa-solid fa-user" style="font-size: 3rem; color: rgba(255,255,255,0.9); position: absolute; display: none; z-index: 1;"></i>
+          </div>
+          
+          <!-- Profile Details -->
+          <div class="ownerDetails">
+            <span class="ownerTitle"><i class="fa-solid fa-star" style="margin-right: 4px; color: #F59E0B;"></i> Premium Travel Partner</span>
+            <h2 class="ownerName">Shivraj Dhakar</h2>
+            <p class="ownerDesc">
+              Providing safe, reliable outstation and city travel across India. We ensure your journey is perfect.
+            </p>
+            
+            <div class="ownerFleetBadge">
+              <i class="fa-solid fa-car-side" style="color: var(--color-primary); font-size: 1.1rem;"></i>
+              <span><strong style="color: var(--color-text-primary);">Fleet:</strong> Dzire, Ertiga, Innova Crysta, Tempo Traveller & more.</span>
+            </div>
+
+            <div class="ownerActions">
+              <a href="tel:+919166560459" class="btnCallProfile">
+                <i class="fa-solid fa-phone"></i> Call Now
+              </a>
+              <a href="https://wa.me/919166560459" class="btnWhatsAppProfile">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TESTIMONIALS SECTION
+         ========================================================================== -->
+    <section class="testimonialsSection" style="padding: 60px 0 80px; background-color: var(--color-surface-2);">
+      <div class="container">
+        <div class="sectionHeader animateOnScroll" style="text-align: center; margin-bottom: 50px;">
+          <span class="sectionLabel">Testimonials</span>
+          <h2 class="sectionTitle">What Our Clients Say</h2>
+        </div>
+        <div class="testimonialsGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+          
+          <!-- Testimonial 1 -->
+          <div class="testimonialCard animateOnScroll" style="background: var(--color-surface); padding: 22px 24px; border-radius: 14px; box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';" onmouseout="this.style.transform='translateY(0)';">
+            <div style="color: #F59E0B; font-size: 0.9rem; margin-bottom: 12px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.5; font-style: italic; margin-bottom: 16px;">"Booked an Innova for a family trip from Jaipur to Jodhpur. The driver was very polite and drove safely. The car was spotless. Highly recommended!"</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold;">R</div>
+              <div>
+                <h4 style="margin: 0; font-size: 1rem; color: var(--color-text-primary);">Rahul Sharma</h4>
+                <span style="font-size: 0.8rem; color: var(--color-text-secondary);">Family Trip</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonialCard animateOnScroll" style="background: var(--color-surface); padding: 22px 24px; border-radius: 14px; box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';" onmouseout="this.style.transform='translateY(0)';">
+            <div style="color: #F59E0B; font-size: 0.9rem; margin-bottom: 12px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.5; font-style: italic; margin-bottom: 16px;">"We needed a Tempo Traveller for a group tour to Salasar. The vehicle was extremely comfortable with great AC. The entire journey was smooth and hassle-free."</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: #10B981; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold;">P</div>
+              <div>
+                <h4 style="margin: 0; font-size: 1rem; color: var(--color-text-primary);">Priya Patel</h4>
+                <span style="font-size: 0.8rem; color: var(--color-text-secondary);">Group Tour</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonialCard animateOnScroll" style="background: var(--color-surface); padding: 22px 24px; border-radius: 14px; box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';" onmouseout="this.style.transform='translateY(0)';">
+            <div style="color: #F59E0B; font-size: 0.9rem; margin-bottom: 12px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.5; font-style: italic; margin-bottom: 16px;">"Excellent service! I use their Dzire for my regular business trips to Delhi. Always on time, professional drivers, and reasonable pricing. Best in class."</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: #F59E0B; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold;">V</div>
+              <div>
+                <h4 style="margin: 0; font-size: 1rem; color: var(--color-text-primary);">Vikram Singh</h4>
+                <span style="font-size: 0.8rem; color: var(--color-text-secondary);">Business Traveler</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Grow Your Business Section Removed -->
+
+
+
+    <!-- CTA Section Removed -->
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="desktopFooter">
+        <!-- Brand -->
+        <div class="brandColumn">
+          <a href="#" class="footerLogo" style="display: block; margin-bottom: 15px;">
+            <img src="public/images/LOGO.png" alt="WorldTours & Travels" style="height: 60px; width: auto; max-width: 100%;">
+          </a>
+          <p class="brandDescription">Premium travel and car rental services across India.</p>
+          <div class="socialLinks">
+            <a href="javascript:void(0)" class="socialIcon"><i class="fa-brands fa-facebook"></i></a>
+            <a href="javascript:void(0)" class="socialIcon"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="linksColumn">
+          <h4 class="columnTitle">Quick Links</h4>
+          <ul class="linksList">
+            <li><a href="#" class="footerLink">Home</a></li>
+            <li><a href="#profile" class="footerLink">About Us</a></li>
+            <li><a href="#services" class="footerLink">Our Services</a></li>
+            <li><a href="#contact" class="footerLink">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="contactColumn">
+          <h4 class="columnTitle">Contact</h4>
+          <ul class="contactList">
+            <li><a href="tel:+919166560459" class="contactLink"><i class="fa-solid fa-phone"></i> +91 9166560459</a></li>
+            <li><a href="https://wa.me/919166560459" target="_blank" class="contactLink"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a></li>
+            <li class="contactLink"><i class="fa-solid fa-location-dot"></i> Premium Travel Partner<br>Jaipur, Rajasthan</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mobile Footer (Visible on Mobile only) -->
+      <div class="mobileFooter">
+        <div class="mobileFooterGroup">
+          <div style="display: flex; justify-content: center; margin-bottom: 10px;">
+            <img src="public/images/LOGO.png" alt="WorldTours & Travels" style="height: 60px; width: auto; max-width: 100%;">
+          </div>
+          <p style="font-size:0.8rem; opacity:0.7; margin-top:5px;">Premium Travel &amp; Car Rental Services</p>
+        </div>
+        <div class="socialLinks" style="justify-content:center; margin-bottom: 20px;">
+          <a href="javascript:void(0)" class="socialIcon"><i class="fa-brands fa-facebook"></i></a>
+          <a href="javascript:void(0)" class="socialIcon"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="mobileCopyright">
+          © 2026 WorldTours&Travels. All Rights Reserved.
+        </div>
+      </div>
+
+      <!-- Desktop Bottom Bar -->
+      <div class="bottomBar">
+        <p class="copyright">© 2026 WorldTours&Travels. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Actions -->
+  <a href="https://wa.me/919166560459" target="_blank" rel="noopener noreferrer" class="whatsappFloat" aria-label="WhatsApp Support">
+    <i class="fa-brands fa-whatsapp whatsappIcon"></i>
+  </a>
+
+  <div class="scrollTop" id="scrollTopBtn">
+    <i class="fa-solid fa-arrow-up"></i>
+  </div>
+
+  <!-- ==========================================================================
+       MODALS
+       ========================================================================== -->
+  <div class="policyModalOverlay" id="termsModal">
+    <div class="policyModal">
+      <div class="policyModalHeader">
+        <h3>Terms & Conditions</h3>
+        <button class="policyModalClose" onclick="closePolicyModal('termsModal')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="policyModalBody">
+        <p>Welcome to MOBITM SOLUTIONS. These Terms & Conditions govern your access to and use of our API reselling platform and digital financial services.</p>
+        
+        <h4>1. Acceptance of Terms</h4>
+        <p>By creating an account, integrating our API, or utilizing any of our services (Recharge, BBPS, AEPS, Payouts), you agree to be bound by these Terms. If you do not agree, please do not use our services.</p>
+
+        <h4>2. Service Usage & API Integration</h4>
+        <ul>
+          <li><strong>Authorized Use:</strong> Our APIs are provided strictly for commercial use by verified retailers, distributors, and partners.</li>
+          <li><strong>Prohibited Activities:</strong> You must not use our services for money laundering, fraudulent activities, or any operations prohibited by the Reserve Bank of India (RBI) or local laws.</li>
+          <li><strong>API Limits:</strong> We reserve the right to enforce rate limits on API calls to maintain system stability.</li>
+        </ul>
+
+        <h4>3. Account Security</h4>
+        <p>You are solely responsible for maintaining the confidentiality of your API keys, merchant dashboard credentials, and transactional pins. MOBITM SOLUTIONS shall not be held liable for any loss arising from credential theft or unauthorized access.</p>
+
+        <h4>4. Service Availability</h4>
+        <p>While we strive to provide 99.9% uptime, our services depend on third-party telecom operators, banking partners, and NPCI servers. We are not liable for transaction delays caused by third-party downtimes.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="policyModalOverlay" id="privacyModal">
+    <div class="policyModal">
+      <div class="policyModalHeader">
+        <h3>Privacy Policy</h3>
+        <button class="policyModalClose" onclick="closePolicyModal('privacyModal')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="policyModalBody">
+        <p>MOBITM SOLUTIONS respects your privacy. This policy outlines how we collect, use, and safeguard your data when you use our API and digital services.</p>
+        
+        <h4>1. Information We Collect</h4>
+        <p>To provide you with secure B2B financial services, we collect necessary business details including, but not limited to:</p>
+        <ul>
+          <li><strong>Business Information:</strong> PAN, Aadhar, GST Registration, and Bank Account details for KYC purposes.</li>
+          <li><strong>Transaction Logs:</strong> IP addresses, API request payloads, timestamps, and device identifiers.</li>
+        </ul>
+
+        <h4>2. How We Use Your Data</h4>
+        <p>Your data is strictly utilized to facilitate seamless transactions, provide customer support, and meet regulatory compliance requirements mandated by the RBI and partner banks.</p>
+
+        <h4>3. Data Sharing & Security</h4>
+        <ul>
+          <li><strong>Third-Party Sharing:</strong> We do not sell your data. We share necessary transactional data only with telecom operators, billers, and banking networks (like NPCI) to fulfill your requests.</li>
+          <li><strong>Encryption:</strong> All API communication is secured via end-to-end SSL/TLS encryption. Sensitive data is stored in highly secure, isolated databases.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="policyModalOverlay" id="refundModal">
+    <div class="policyModal">
+      <div class="policyModalHeader">
+        <h3>Refund & Cancellation Policy</h3>
+        <button class="policyModalClose" onclick="closePolicyModal('refundModal')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="policyModalBody">
+        <p>At MOBITM SOLUTIONS, we maintain a transparent refund mechanism for all API and portal-based transactions.</p>
+        
+        <h4>1. Transaction Status Guidelines</h4>
+        <ul>
+          <li><strong>Successful Transactions:</strong> Once a transaction (Recharge, BBPS, or Payout) is acknowledged as 'Successful' by the operator or bank, it is final. We cannot cancel or refund successful transactions.</li>
+          <li><strong>Failed Transactions:</strong> If a transaction fails and the amount has been deducted from your MOBITM SOLUTIONS wallet, the system will automatically initiate a refund to your wallet within 2 to 24 working hours.</li>
+          <li><strong>Pending Transactions:</strong> For transactions stuck in a 'Pending' state, we await the final confirmation from the operator. Refunds are processed only if the final status updates to 'Failed'.</li>
+        </ul>
+
+        <h4>2. Wallet Top-Ups</h4>
+        <p>Any funds added to the MOBITM SOLUTIONS wallet via UPI, Net Banking, or Bank Transfer are strictly meant for consuming our API services. These wallet balances are <strong>non-refundable</strong> to your original bank account under normal circumstances.</p>
+        
+        <h4>3. Dispute Resolution</h4>
+        <p>If you observe any discrepancy in your transaction ledger, you must raise a ticket with our support team within 48 hours of the transaction.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       JAVASCRIPT FUNCTIONALITIES
+       ========================================================================== -->
+  
+  
+  <script src="src/js/script.js"></script>
+</body>
+</html>
+
+
+
+
